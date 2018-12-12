@@ -2,8 +2,15 @@
 // Make More OOPy
 
 
+// function widget(options) {
+// 	return 'Name:'+options.name+' Age:'+options.age+' id:'+options.id
+// }
+
+
 function widget(options) {
-	return 'Name:'+options.name+' Age:'+options.age+' id:'+options.id
+  const {name, age, id } = options
+  // let options = {name, age, id}
+	return `Name: ${name} Age: ${age} id: ${id}`
 }
 
 
