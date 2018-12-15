@@ -11,19 +11,21 @@
 function widget(f) {
   if (f === undefined ) {
     this.folds = 1;
-  } else { this.folds = f;
-}
+  }
+  else { this.folds = f;
+  }
 this.Id = widget.nextCount();
 }
 
+
 widget.prototype.origami = function() {
-    console.log("Preparing to fold unit: "+ this.Id)
+    console.log("Preparing to fold unit: "+ this.Id);
         this.foldAction();
     if (this.folds === 2) {
         console.log('makes an envelope');
     }
     if (this.folds == 3) {
-    console.log('makes a crane');
+      console.log('makes a crane');
     }
 
     if (this.folds === 4) {
@@ -31,7 +33,7 @@ widget.prototype.origami = function() {
     }
 
     if (this.folds === 5) {
-        console.log('makes an elephant')
+        console.log('makes an elephant');
     }
 
     if (6 == this.folds) {
@@ -39,11 +41,11 @@ widget.prototype.origami = function() {
     }
 }
 
+
 widget.prototype.foldAction = function() {
     console.log('???');
     for (i = 0; i < this.folds; i++ ) {
       let step = 1 + i; console.log("fold... " + step);
-
     }
 }
 
@@ -67,9 +69,21 @@ let elephant = new widget(5);
 elephant.origami();
 
 let oops = new widget(6);
-oops.origami()
+oops.origami();
 
 console.log(widget.getCount());
+
+
+widget.nextCount = () => {
+  widget.count = widget.count || 0;
+  widget.count += 1;
+  return widget.count;
+}
+
+
+widget.getCount = () => {
+  return widget.count;
+}
 
 
 

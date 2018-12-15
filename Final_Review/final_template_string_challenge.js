@@ -8,10 +8,10 @@
 
 
 function widget(options) {
-  const {name, age, id } = options
-  // let options = {name, age, id}
-	return `Name: ${name} Age: ${age} id: ${id}`
+  const {name, age, id } = options;
+	return `Name: ${name} Age: ${age} id: ${id}`;
 }
+
 
 
 console.log(widget({ name: 'Wegman', age: 33, id: 9348576 }))
